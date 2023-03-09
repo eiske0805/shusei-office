@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>会員情報管理画面</title>
+    <link rel="stylesheet" href="styles/css-reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="member-mst">
+      <header>
+        <nav class="hd-nav">
+          <ul class="hd-nav__left">
+            <li>事務局サイト</li>
+            <li>会員情報管理</li>
+          </ul>
+          <ul class="hd-nav__right">
+            <li class="hd-nav__item">
+              <a href="">メニューに戻る</a>
+            </li>
+            <li class="hd-nav__item">ログイン者お名前</li>
+            <li class="hd-nav__btn">
+              <button>
+                <a href="">ログアウト</a>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="member-search">
+          <div class="member-search__title">会員検索</div>
+          <form class="member-search__form" action="" method="POST">
+            <div class="member-search__form-group">
+              <label for="venue">所属<br />会場</label>
+              <select name="" id="venue">
+                <option hidden>-選択してください-</option>
+                <option>宮城古川</option>
+              </select>
+            </div>
+            <div class="member-search__form-group">
+              <label for="member-type">会員<br />種別</label>
+              <select name="" id="member-type">
+                <option hidden>-選択してください-</option>
+                <option>正会員</option>
+              </select>
+            </div>
+            <div class="member-search__form-group">
+              <label for="name">お名前</label>
+              <input type="text" name="" id="name" maxlength="20" />
+            </div>
+            <div class="member-search__form-group">
+              <label for="email">メール<br />アドレス</label>
+              <input type="email" name="" id="email" maxlength="256" />
+            </div>
+            <div class="member-search__form-group">
+              <button class="member-search__submit" type="submit">
+                会員一覧表示
+              </button>
+            </div>
+          </form>
+        </section>
+        <div class="member">
+          <section class="member-list">
+            <div class="member-list__title">会員一覧</div>
+            <table class="member-list__table">
+              <thead>
+                <tr>
+                  <th>所属会場</th>
+                  <th>会員種別</th>
+                  <th>お名前</th>
+                  <th>会社名</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>宮城古川</td>
+                  <td>正会員</td>
+                  <td class="td-name">
+                    <a href="">池上 悦生</a>
+                  </td>
+                  <td>株式会社 夢工房</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section class="member-details">
+            <div class="tabs">
+              <input id="member-info" type="radio" name="tab_item" checked />
+              <label class="tab_item member-info" for="member-info">
+                会員情報
+              </label>
+
+              <input id="my-venue" type="radio" name="tab_item" />
+              <label class="tab_item my-venue" for="my-venue">
+                自会場出席実績
+              </label>
+
+              <input id="other-venue" type="radio" name="tab_item" />
+              <label class="tab_item other-venue" for="other-venue">
+                他会場出席実績
+              </label>
+              <div class="tab_content" id="member-info_content">
+                <div class="tab_content_description">
+                  <p class="c-txtsp">総合の内容がここに入ります</p>
+                </div>
+              </div>
+              <div class="tab_content" id="my-venue_content">
+                <div class="tab_content_description">
+                  <p class="c-txtsp">プログラミングの内容がここに入ります</p>
+                </div>
+              </div>
+              <div class="tab_content" id="other-venue_content">
+                <div class="tab_content_description">
+                  <p class="c-txtsp">デザインの内容がここに入ります</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

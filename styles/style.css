@@ -1,0 +1,209 @@
+/* general ----------------------------------------- */
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans', Meiryo, sans-serif;
+  color: #404040;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  -webkit-padding-start: 0px;
+  padding-inline-start: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  all: unset;
+}
+
+/* member-mst.html ----------------------------------------- */
+.member-mst header {
+  background-color: #8faadc;
+  height: 80px;
+}
+.member-mst .hd-nav {
+  width: 100%;
+  max-width: 1260px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.member-mst .hd-nav__left {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.member-mst .hd-nav__left li {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+.member-mst .hd-nav__left li:nth-child(2) {
+  margin-left: 60px;
+}
+.member-mst .hd-nav__right {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.member-mst .hd-nav__right li {
+  color: white;
+  font-weight: bold;
+}
+.member-mst .hd-nav__right li a {
+  color: white;
+}
+.member-mst .hd-nav__item {
+  padding: 10px 0;
+}
+.member-mst .hd-nav__btn button {
+  background-color: #4e70be;
+}
+.member-mst .hd-nav__btn button a {
+  padding: 10px 20px;
+  display: block;
+}
+.member-mst .member-search {
+  width: 100%;
+  margin: 40px auto 20px;
+  padding: 0 30px;
+  max-width: 1260px;
+}
+.member-mst .member-search__title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.member-mst .member-search__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.member-mst .member-search__form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.member-mst .member-search__form-group label {
+  display: block;
+  margin-right: 7px;
+  line-height: 1.3;
+}
+.member-mst .member-search__form-group select,
+.member-mst .member-search__form-group input {
+  height: 50px;
+}
+.member-mst .member-search__submit {
+  padding: 10px 20px;
+  background-color: #4e70be;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.member-mst .member {
+  width: 100%;
+  margin: 20px auto;
+  padding: 0 30px;
+  max-width: 1260px;
+  display: flex;
+  justify-content: space-between;
+}
+.member-mst .member .member-list {
+  width: 45%;
+}
+.member-mst .member .member-list__title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #4e70be;
+  margin-bottom: 10px;
+}
+.member-mst .member .member-list__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.member-mst .member .member-list__table thead th {
+  background-color: #8faadc;
+  color: white;
+}
+.member-mst .member .member-list__table th,
+.member-mst .member .member-list__table td {
+  border: 1px solid #808080;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.member-mst .member .member-list__table td {
+  padding-left: 3px;
+}
+.member-mst .member .member-list__table .td-name a {
+  color: #4e70be;
+}
+.member-mst .member .member-details {
+  width: 53%;
+}
+.member-mst .member .member-details .tab_item {
+  width: 33.3333333333%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #bfbfbf;
+  text-align: center;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  border-top: 3px solid #808080;
+  border-bottom: 3px solid #808080;
+  cursor: pointer;
+}
+.member-mst .member .member-details .tab_item.member-info {
+  border-left: 3px solid #808080;
+}
+.member-mst .member .member-details .tab_item.my-venue {
+  border-left: 3px solid #808080;
+  border-right: 3px solid #808080;
+}
+.member-mst .member .member-details .tab_item.other-venue {
+  border-right: 3px solid #808080;
+}
+.member-mst .member .member-details input[name='tab_item'] {
+  display: none;
+}
+.member-mst .member .member-details .tab_content {
+  display: none;
+  padding: 40px 40px 0;
+  clear: both;
+  overflow: hidden;
+  border-left: 3px solid #808080;
+  border-right: 3px solid #808080;
+  border-bottom: 3px solid #808080;
+}
+.member-mst .member .member-details #member-info:checked ~ #member-info_content,
+.member-mst .member .member-details #my-venue:checked ~ #my-venue_content,
+.member-mst
+  .member
+  .member-details
+  #other-venue:checked
+  ~ #other-venue_content {
+  display: block;
+}
+.member-mst .member .member-details .tabs input:checked + .tab_item {
+  background-color: white;
+  border-bottom: none;
+  cursor: auto;
+} /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,250 @@
+// variable -----------------------------------------
+$cWhite: white;
+$cBlack: black;
+$cLightBlue: #8faadc;
+$cBlue: #4e70be;
+$cGray: #808080;
+$cLightBlack: #404040;
+$cLightGray: #bfbfbf;
+$contentMaxWidth: 1260px;
+$navHeight: 80px;
+$ftMd: 20px;
+$ftLg: 25px;
+$pdLR: 30px;
+$mpXs: 10px;
+$mpSm: 20px;
+$mpMd: 40px;
+$mpLg: 60px;
+$mpXl: 100px;
+
+// breakpoints -----------------------------------------
+$breakpoints: (
+  'sm': 'screen and (min-width: 480px)',
+  'md': 'screen and (min-width: 600px)',
+  'lg': 'screen and (min-width: 960px)',
+  'xl': 'screen and (min-width: 1280px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/* general ----------------------------------------- */
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans', Meiryo, sans-serif;
+  color: $cLightBlack;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: $cBlack;
+}
+
+ul {
+  padding-inline-start: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  all: unset;
+}
+
+/* member-mst.html ----------------------------------------- */
+.member-mst {
+  header {
+    background-color: $cLightBlue;
+    height: $navHeight;
+  }
+  .hd-nav {
+    width: 100%;
+    max-width: $contentMaxWidth;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 $pdLR;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    &__left {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
+      li {
+        color: $cWhite;
+        font-size: $ftLg;
+        font-weight: bold;
+        &:nth-child(2) {
+          margin-left: $mpLg;
+        }
+      }
+    }
+    &__right {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 50%;
+      li {
+        color: $cWhite;
+        font-weight: bold;
+        a {
+          color: $cWhite;
+        }
+      }
+    }
+    &__item {
+      padding: 10px 0;
+    }
+    &__btn {
+      button {
+        background-color: $cBlue;
+        a {
+          padding: 10px 20px;
+          display: block;
+        }
+      }
+    }
+  }
+  .member-search {
+    width: 100%;
+    margin: $mpMd auto $mpSm;
+    padding: 0 $pdLR;
+    max-width: $contentMaxWidth;
+    &__title {
+      font-size: $ftMd;
+      margin-bottom: $mpSm;
+    }
+    &__form {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+    &__form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: $mpSm;
+      label {
+        display: block;
+        margin-right: 7px;
+        line-height: 1.3;
+      }
+      select,
+      input {
+        height: 50px;
+      }
+    }
+    &__submit {
+      padding: 10px 20px;
+      background-color: $cBlue;
+      color: $cWhite;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+  .member {
+    width: 100%;
+    margin: $mpSm auto;
+    padding: 0 $pdLR;
+    max-width: $contentMaxWidth;
+    display: flex;
+    justify-content: space-between;
+    .member-list {
+      width: 45%;
+      &__title {
+        font-size: $ftLg;
+        font-weight: bold;
+        color: $cBlue;
+        margin-bottom: $mpXs;
+      }
+      &__table {
+        width: 100%;
+        border-collapse: collapse;
+        thead {
+          th {
+            background-color: $cLightBlue;
+            color: $cWhite;
+          }
+        }
+        th,
+        td {
+          border: 1px solid $cGray;
+          padding-top: 7px;
+          padding-bottom: 7px;
+        }
+        td {
+          padding-left: 3px;
+        }
+        .td-name {
+          a {
+            color: $cBlue;
+          }
+        }
+      }
+    }
+    .member-details {
+      width: 53%;
+
+      .tab_item {
+        width: calc(100% / 3);
+        height: 50px;
+        line-height: 50px;
+        background-color: $cLightGray;
+        text-align: center;
+        display: block;
+        float: left;
+        text-align: center;
+        font-weight: bold;
+        border-top: 3px solid $cGray;
+        border-bottom: 3px solid $cGray;
+        cursor: pointer;
+        &.member-info {
+          border-left: 3px solid $cGray;
+        }
+        &.my-venue {
+          border-left: 3px solid $cGray;
+          border-right: 3px solid $cGray;
+        }
+        &.other-venue {
+          border-right: 3px solid $cGray;
+        }
+      }
+
+      input[name='tab_item'] {
+        display: none;
+      }
+
+      .tab_content {
+        display: none;
+        padding: 40px 40px 0;
+        clear: both;
+        overflow: hidden;
+        border-left: 3px solid $cGray;
+        border-right: 3px solid $cGray;
+        border-bottom: 3px solid $cGray;
+      }
+
+      #member-info:checked ~ #member-info_content,
+      #my-venue:checked ~ #my-venue_content,
+      #other-venue:checked ~ #other-venue_content {
+        display: block;
+      }
+
+      .tabs input:checked + .tab_item {
+        background-color: $cWhite;
+        border-bottom: none;
+        cursor: auto;
+      }
+    }
+  }
+}
