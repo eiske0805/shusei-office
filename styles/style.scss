@@ -7,7 +7,7 @@ $cGray: #808080;
 $cLightBlack: #404040;
 $cLightGray: #bfbfbf;
 $contentMaxWidth: 1260px;
-$navHeight: 110px;
+$navHeight: 90px;
 $pdLR: 30px;
 
 // breakpoints -----------------------------------------
@@ -54,13 +54,14 @@ button {
 
 select,
 input[type='text'],
-input[type='email'] {
-  height: 50px;
+input[type='email'],
+input[type='date'] {
+  height: 40px;
   padding: 0 5px;
 }
 input[type='radio'] {
   width: 20px;
-  height: 50px;
+  height: 40px;
 }
 
 /* common  ----------------------------------------- */
@@ -108,6 +109,7 @@ input[type='radio'] {
   header {
     background-color: $cLightBlue;
     height: $navHeight;
+    margin-bottom: 40px;
   }
   .hd-nav {
     width: 100%;
@@ -122,9 +124,10 @@ input[type='radio'] {
       flex-wrap: wrap;
     }
     &__item {
-      padding: 5px 30px;
+      padding: 0 30px;
       color: $cWhite;
       font-weight: bold;
+      line-height: 1;
       a {
         color: $cWhite;
         display: block;
@@ -132,15 +135,14 @@ input[type='radio'] {
     }
     &__btn {
       button {
-        margin: 5px 30px;
+        margin: 0 30px;
       }
     }
   }
   .member-search {
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     &__title {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
     &__form {
       display: flex;
@@ -151,7 +153,7 @@ input[type='radio'] {
     &__form-group {
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       label {
         display: block;
         margin: 0 3px 0 10px;
