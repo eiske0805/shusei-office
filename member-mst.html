@@ -11,7 +11,7 @@
   <body>
     <div class="member-mst">
       <header>
-        <nav class="hd-nav">
+        <nav class="hd-nav content-width">
           <ul class="hd-nav__ul-left">
             <li class="main-title hd-nav__item">事務局サイト</li>
             <li class="main-title hd-nav__item">会員情報管理</li>
@@ -21,7 +21,7 @@
               <a href="">メニューに戻る</a>
             </li>
             <li class="hd-nav__item">ログイン者お名前</li>
-            <li class="hd-nav__btn">
+            <li class="hd-nav__item">
               <button class="btn-with-a">
                 <a href="">ログアウト</a>
               </button>
@@ -32,7 +32,11 @@
       <main>
         <section class="member-search">
           <div class="member-search__title sub-title">会員検索</div>
-          <form class="member-search__form" action="" method="POST">
+          <form
+            class="member-search__form content-width"
+            action=""
+            method="POST"
+          >
             <div class="member-search__form-group">
               <label for="venue">所属会場</label>
               <select name="" id="venue" class="select-common">
@@ -789,8 +793,6 @@
                     </button>
                     <button class="btn-deleated">削除</button>
                   </div>
-
-                  <!--  -->
                 </form>
 
                 <div class="unsubscribe-modal" id="modal-01">
@@ -872,7 +874,7 @@
                   <div class="name">池上悦生</div>
                   <div class="member-type">正会員</div>
                 </div>
-                <table class="my-venue-content__table">
+                <table>
                   <thead>
                     <tr>
                       <th>開催日</th>
@@ -909,7 +911,7 @@
                   <div class="name">池上悦生</div>
                   <div class="member-type">正会員</div>
                 </div>
-                <table class="other-venue-content__table">
+                <table>
                   <thead>
                     <tr>
                       <th>開催日</th>

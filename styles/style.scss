@@ -141,9 +141,6 @@ td {
     margin-bottom: 40px;
   }
   .hd-nav {
-    width: 100%;
-    max-width: $contentMaxWidth;
-    margin: 0 auto;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -155,27 +152,23 @@ td {
     }
     &__ul-left {
       width: 230px;
-      @media screen and (min-width: 1000px) {
+      column-gap: 60px;
+      @include mq(lg) {
         width: 460px;
       }
       flex-shrink: 0;
     }
     &__ul-right {
       justify-content: flex-end;
+      column-gap: 30px;
     }
     &__item {
-      padding: 0 $pdLR;
       color: $cWhite;
       font-weight: bold;
       line-height: 1;
       a {
         color: $cWhite;
         display: block;
-      }
-    }
-    &__btn {
-      button {
-        margin: 0 $pdLR;
       }
     }
   }
@@ -191,18 +184,18 @@ td {
       justify-content: space-between;
       align-items: flex-end;
       flex-wrap: wrap;
+      column-gap: 20px;
     }
     &__form-group {
       display: flex;
       flex-direction: column;
-      flex-direction: column;
-      margin: 0 30px 15px;
+      margin-bottom: 15px;
       label {
         margin-bottom: 2px;
       }
     }
     &__form-group-button {
-      margin: 0 30px 38px;
+      margin-bottom: 38px;
     }
   }
   .member-list-and-details {
