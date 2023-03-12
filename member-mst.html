@@ -12,15 +12,17 @@
     <div class="member-mst">
       <header>
         <nav class="hd-nav">
-          <ul class="hd-nav__ul">
+          <ul class="hd-nav__ul-left">
             <li class="main-title hd-nav__item">事務局サイト</li>
             <li class="main-title hd-nav__item">会員情報管理</li>
+          </ul>
+          <ul class="hd-nav__ul-right">
             <li class="hd-nav__item">
               <a href="">メニューに戻る</a>
             </li>
             <li class="hd-nav__item">ログイン者お名前</li>
             <li class="hd-nav__btn">
-              <button class="btn">
+              <button class="btn-with-a">
                 <a href="">ログアウト</a>
               </button>
             </li>
@@ -28,22 +30,24 @@
         </nav>
       </header>
       <main>
-        <section class="member-search content-width">
+        <section class="member-search">
           <div class="member-search__title sub-title">会員検索</div>
           <form class="member-search__form" action="" method="POST">
             <div class="member-search__form-group">
               <label for="venue">所属会場</label>
               <select name="" id="venue" class="select-common">
                 <option hidden>選択してください</option>
-                <option>宮城古川</option>
+                <option value="">宮城古川</option>
               </select>
+              <div class="err-msg"></div>
             </div>
             <div class="member-search__form-group">
               <label for="member-type">会員種別</label>
               <select name="" id="member-type" class="select-common">
                 <option hidden>選択してください</option>
-                <option>正会員</option>
+                <option value="">正会員</option>
               </select>
+              <div class="err-msg"></div>
             </div>
             <div class="member-search__form-group">
               <label for="name">お名前</label>
@@ -51,10 +55,10 @@
                 type="text"
                 name=""
                 id="name"
-                class="input-name"
+                class="content"
                 maxlength="20"
-                size="20"
               />
+              <div class="err-msg"></div>
             </div>
             <div class="member-search__form-group">
               <label for="email">メールアドレス</label>
@@ -64,13 +68,11 @@
                 id="email"
                 class="input-email"
                 maxlength="256"
-                size="40"
               />
+              <div class="err-msg"></div>
             </div>
             <div class="member-search__form-group-button">
-              <button class="member-search__submit btn" type="submit">
-                <a href="">会員一覧表示</a>
-              </button>
+              <button class="member-search__submit btn">会員一覧表示</button>
             </div>
           </form>
         </section>
@@ -88,6 +90,302 @@
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
+                  <tr>
+                    <td>宮城古川</td>
+                    <td>正会員</td>
+                    <td class="td-name">
+                      <a href="">池上 悦生</a>
+                    </td>
+                    <td>株式会社 夢工房</td>
+                  </tr>
                   <tr>
                     <td>宮城古川</td>
                     <td>正会員</td>
@@ -148,8 +446,8 @@
                       >所属会場<br />
                       <span class="member-info__form-required-item">必須</span>
                     </label>
-                    <select name="" id="md-venue" required>
-                      <option>宮城古川</option>
+                    <select class="content" name="" id="md-venue" required>
+                      <option value="">宮城古川</option>
                     </select>
                     <div class="err-msg">エラーメッセージ</div>
                   </div>
@@ -159,12 +457,12 @@
                       >会員種別<br />
                       <span class="member-info__form-required-item">必須</span>
                     </label>
-                    <div class="radio-buttons">
+                    <div class="content">
                       <input
                         type="radio"
                         name=""
                         id="md-full-member"
-                        value="full-member"
+                        value=""
                         required
                       />
                       <label for="md-full-member">正会員</label>
@@ -172,17 +470,17 @@
                         type="radio"
                         name=""
                         id="md-semi-member"
-                        value="semi-member"
+                        value=""
                       />
                       <label for="smd-emi-member">準会員</label>
-                      <input type="radio" name="" id="md-guest" value="guest" />
+                      <input type="radio" name="" id="md-guest" value="" />
                       <label for="md-guest">ゲスト</label>
                     </div>
                     <div class="err-msg"></div>
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-name"
+                    <label class="title" for="md-name"
                       >お名前<br />
                       <span class="member-info__form-required-item">必須</span>
                     </label>
@@ -190,127 +488,123 @@
                       type="text"
                       name=""
                       id="md-name"
-                      class="input-name"
+                      class="content"
                       maxlength="20"
-                      size="20"
                       required
                     />
                     <div class="err-msg"></div>
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-venue">会場役職</label>
-                    <select name="" id="md-venue" required>
+                    <label class="title" for="md-venue">会場役職</label>
+                    <select class="content" name="" id="md-venue" required>
                       <option>代表世話人</option>
                     </select>
-                    <div class="err-msg">エラーメッセージ</div>
+                    <div class="err-msg"></div>
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-name"
+                    <label class="title" for="md-kana"
                       >お名前カナ<br />
                       <span class="member-info__form-required-item">必須</span>
                     </label>
                     <input
                       type="text"
                       name=""
-                      id="md-name"
-                      class="input-name"
+                      id="md-kana"
+                      class="content"
                       maxlength="20"
-                      size="20"
                       required
                     />
                     <div class="err-msg"></div>
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-name"
+                    <label class="title" for="md-email"
                       >メールアドレス<br />
                       <span class="member-info__form-required-item">必須</span>
                     </label>
                     <input
                       type="email"
                       name=""
-                      id="md-name"
-                      class="input-name"
+                      id="md-email"
+                      class="content"
                       maxlength="256"
-                      size="20"
                       required
                     />
                     <div class="err-msg"></div>
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-name">メールアドレス確認入力 </label>
+                    <label class="title" for="md-email-conf"
+                      >メールアドレス確認入力
+                    </label>
                     <input
                       type="email"
                       name=""
-                      id="md-name"
-                      class="input-name"
+                      id="md-email-conf"
+                      class="content"
                       maxlength="256"
-                      size="20"
                     />
                     <div class="err-msg"></div>
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-name"
+                    <label class="title" for="md-tell"
                       >電話番号<br />
                       <span class="member-info__form-required-item">必須</span>
                     </label>
                     <input
                       type="text"
                       name=""
-                      id="md-name"
-                      class="input-name"
+                      id="md-tell"
+                      class="content"
                       maxlength="11"
-                      size="20"
                       required
                     />
                     <div class="err-msg"></div>
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-name"
+                    <label class="title" for="md-company-name"
                       >会社名<br />
                       <span class="member-info__form-required-item">必須</span>
                     </label>
                     <input
                       type="text"
                       name=""
-                      id="md-name"
-                      class="input-name"
+                      id="md-company-name"
+                      class="content"
                       maxlength="20"
-                      size="20"
                       required
                     />
                     <div class="err-msg"></div>
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-name"
+                    <label class="title" for="md-position"
                       >役職<br />
                       <span class="member-info__form-required-item">必須</span>
                     </label>
                     <input
                       type="text"
                       name=""
-                      id="md-name"
-                      class="input-name"
+                      id="md-position"
+                      class="content"
                       maxlength="15"
-                      size="20"
                       required
                     />
                     <div class="err-msg"></div>
                   </div>
                   <div class="member-info__form-group">
-                    <label for="md-name">
+                    <label class="title" for="md-business-details">
                       事業内容<br />
                       <span class="member-info__form-required-item">必須</span>
                     </label>
                     <textarea
+                      class="content"
                       name=""
-                      id="textarea1"
+                      id="md-business-details"
                       maxlength="60"
                       cols="70"
                       rows="10"
@@ -320,30 +614,31 @@
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-name"> 会社電話番号 </label>
+                    <label class="title" for="md-company-tell">
+                      会社電話番号
+                    </label>
                     <input
                       type="text"
                       name=""
-                      id="md-name"
-                      class="input-name"
+                      id="md-company-tell"
+                      class="content"
                       maxlength="13"
-                      size="13"
                     />
                     <div class="err-msg"></div>
                   </div>
 
                   <div class="member-info__form-group-zip-code">
-                    <label for="md-name"> 会社郵便番号 </label>
-                    <div class="zip-code-contents">
+                    <label class="title" for="md-company-zip-code">
+                      会社郵便番号
+                    </label>
+                    <div class="content">
                       <input
                         type="text"
                         name=""
-                        id="md-name"
-                        class="input-name"
+                        id="md-company-zip-code"
                         maxlength="7"
-                        size="20"
                       />
-                      <button class="btn">
+                      <button class="btn-with-a">
                         <a href="">郵便番号検索</a>
                       </button>
                     </div>
@@ -351,112 +646,121 @@
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-name"> 会社都道府県 </label>
+                    <label class="title" for="md-company-prefecture">
+                      会社都道府県
+                    </label>
                     <input
                       type="text"
                       name=""
-                      id="md-name"
-                      class="input-name"
+                      id="md-company-prefecture"
+                      class="content"
                       maxlength="4"
-                      size="20"
                     />
                     <div class="err-msg"></div>
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-name"> 会社市区町村 </label>
+                    <label class="title" for="md-company-city">
+                      会社市区町村
+                    </label>
                     <input
                       type="text"
                       name=""
-                      id="md-name"
-                      class="input-name"
+                      id="md-company-city"
+                      class="content"
                       maxlength="10"
-                      size="20"
                     />
                     <div class="err-msg"></div>
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-name"> 会社建物名 </label>
+                    <label class="title" for="md-company-building-name">
+                      会社建物名
+                    </label>
                     <input
                       type="text"
                       name=""
-                      id="md-name"
-                      class="input-name"
+                      id="md-company-building-name"
+                      class="content"
                       maxlength="24"
-                      size="20"
                     />
                     <div class="err-msg"></div>
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-name"> 紹介者 </label>
+                    <label class="title" for="md-who-introduced">
+                      紹介者
+                    </label>
                     <input
                       type="text"
                       name=""
-                      id="md-name"
-                      class="input-name"
+                      id="md-who-introduced"
+                      class="content"
                       maxlength="20"
-                      size="20"
                     />
                     <div class="err-msg"></div>
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-venue">資格更新月 </label>
-                    <select name="" id="md-venue">
-                      <option>1月</option>
-                      <option>2月</option>
-                      <option>1月</option>
-                      <option>1月</option>
-                      <option>1月</option>
-                      <option>1月</option>
-                      <option>1月</option>
-                      <option>1月</option>
-                      <option>1月</option>
-                      <option>1月</option>
-                      <option>1月</option>
-                      <option>1月</option>
+                    <label class="title">資格更新月 </label>
+                    <select class="content" name="">
+                      <option value="">1月</option>
+                      <option value="">2月</option>
+                      <option value="">3月</option>
+                      <option value="">4月</option>
+                      <option value="">5月</option>
+                      <option value="">6月</option>
+                      <option value="">7月</option>
+                      <option value="">8月</option>
+                      <option value="">9月</option>
+                      <option value="">10月</option>
+                      <option value="">11月</option>
+                      <option value="">12月</option>
                     </select>
-                    <div class="err-msg">エラーメッセージ</div>
+                    <div class="err-msg"></div>
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-venue">(任意項目01) </label>
-                    <select name="" id="md-venue">
-                      <option>宮城古川</option>
+                    <label class="title">(任意項目01) </label>
+                    <select class="content" name="">
+                      <option value="">01</option>
                     </select>
-                    <div class="err-msg">エラーメッセージ</div>
+                    <div class="err-msg"></div>
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-name">退会年月日</label>
+                    <label class="title" for="md-unsubscribe-day"
+                      >退会年月日</label
+                    >
                     <input
                       type="date"
                       name=""
-                      id="md-name"
-                      class="input-name"
-                      size="20"
+                      id="md-unsubscribe-day"
+                      class="content"
                     />
+                    <div class="err-msg"></div>
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-name">退会理由</label>
+                    <label class="title" for="md-unsubscribe-reason"
+                      >退会理由</label
+                    >
                     <input
-                      type="date"
+                      type="text"
                       name=""
-                      id="md-name"
-                      class="input-name"
-                      size="20"
-                      maxlength="10"
+                      id="md-unsubscribe-reason"
+                      class="content"
+                      maxlength="24"
                     />
+                    <div class="err-msg"></div>
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-name">備考</label>
+                    <label class="title" for="md-notes">備考</label>
                     <textarea
+                      class="content"
                       name=""
-                      id="textarea1"
+                      id="md-notes"
                       cols="70"
                       rows="10"
                       maxlength="60"
@@ -465,26 +769,172 @@
                   </div>
 
                   <div class="member-info__form-group">
-                    <label for="md-name">最終更新日時</label>
-                    <div>2022/10/07 17:59</div>
+                    <label class="title">最終更新日時</label>
+                    <div class="content">2022/10/07 17:59</div>
                   </div>
 
-                  <div class="member-info__form-group">
-                    <label for="md-name">最終更新担当</label>
-                    <div>佐々木 孝徳</div>
-                    <div>宮城古川</div>
+                  <div class="member-info__form-group-zip-code">
+                    <label class="title">最終更新担当</label>
+                    <div class="content">
+                      <div>佐々木 孝徳</div>
+                      <div>宮城古川</div>
+                    </div>
+                  </div>
+
+                  <div class="member-info__form-group-buttons">
+                    <button class="btn-clear">クリア</button>
+                    <button class="btn-registration">登録</button>
+                    <button class="btn-unsubscribe">
+                      <a href="#modal-01"> 退会 </a>
+                    </button>
+                    <button class="btn-deleated">削除</button>
                   </div>
 
                   <!--  -->
                 </form>
+
+                <div class="unsubscribe-modal" id="modal-01">
+                  <a href="#!" class="unsubscribe-modal__overlay"></a>
+                  <div class="unsubscribe-modal__window">
+                    <div class="unsubscribe-modal__content">
+                      <div class="unsubscribe-modal__title main-title">
+                        退会入力
+                      </div>
+                      <div
+                        class="unsubscribe-modal__content-wrapper content-width"
+                      >
+                        <form action="" method="POST">
+                          <div class="member-info__form-group">
+                            <label class="title">お名前</label>
+                            <div class="content">xxxxxxxxxxxxxxx</div>
+                          </div>
+                          <div class="member-info__form-group">
+                            <label class="title">お名前カナ</label>
+                            <div class="content">xxxxxxxxxxxxxxx</div>
+                          </div>
+                          <div class="member-info__form-group">
+                            <label class="title">会員種別</label>
+                            <div class="content">xxxxxxxxxxxxxxx</div>
+                          </div>
+                          <div class="member-info__form-group">
+                            <label class="title" for="md-unsubscribe-day"
+                              >退会年月日<br /><span
+                                class="member-info__form-required-item"
+                                >必須</span
+                              ></label
+                            >
+                            <input
+                              type="date"
+                              name=""
+                              id="md-unsubscribe-day"
+                              class="content"
+                            />
+                            <div class="err-msg"></div>
+                          </div>
+                          <div class="member-info__form-group">
+                            <label class="title" for="md-unsubscribe-reason"
+                              >退会理由</label
+                            >
+                            <input
+                              type="text"
+                              name=""
+                              id="md-unsubscribe-reason"
+                              class="content"
+                              maxlength="24"
+                            />
+                            <div class="err-msg"></div>
+                          </div>
+                          <div
+                            class="member-info__form-group-buttons unsubscribe-buttons"
+                          >
+                            <button class="btn-unsubscribe-update">
+                              退会更新
+                            </button>
+                            <button class="btn-cancel">キャンセル</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <a href="#!" class="unsubscribe-modal__close"></a>
+                  </div>
+                </div>
               </section>
 
-              <section class="tab_content" id="my-venue_content">
-                <p class="c-txtsp">プログラミングの内容がここに入ります</p>
+              <section
+                class="tab_content my-venue-content"
+                id="my-venue_content"
+              >
+                <div class="my-venue-content__title main-title">
+                  自会場出席実績
+                </div>
+                <div class="my-venue-content__name">
+                  <div class="my-venue">宮城古川</div>
+                  <div class="name">池上悦生</div>
+                  <div class="member-type">正会員</div>
+                </div>
+                <table class="my-venue-content__table">
+                  <thead>
+                    <tr>
+                      <th>開催日</th>
+                      <th>イベント名称</th>
+                      <th>出欠</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2022/10/12</td>
+                      <td>第２回例会</td>
+                      <td>出席</td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr>
+                      <td>2022/10/12</td>
+                      <td>第２回例会</td>
+                      <td>出席</td>
+                    </tr>
+                  </tbody>
+                </table>
               </section>
 
-              <section class="tab_content" id="other-venue_content">
-                <p class="c-txtsp">デザインの内容がここに入ります</p>
+              <section
+                class="tab_content other-venue-content"
+                id="other-venue_content"
+              >
+                <div class="other-venue-content__title main-title">
+                  他会場出席実績
+                </div>
+                <div class="other-venue-content__name">
+                  <div class="other-venue">宮城古川</div>
+                  <div class="name">池上悦生</div>
+                  <div class="member-type">正会員</div>
+                </div>
+                <table class="other-venue-content__table">
+                  <thead>
+                    <tr>
+                      <th>開催日</th>
+                      <th>会場名</th>
+                      <th>イベント名称</th>
+                      <th>出欠</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2022/10/12</td>
+                      <td>仙台伊達</td>
+                      <td>第２回例会</td>
+                      <td>出席</td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr>
+                      <td>2022/10/12</td>
+                      <td>仙台青葉</td>
+                      <td>第２回例会</td>
+                      <td>出席</td>
+                    </tr>
+                  </tbody>
+                </table>
               </section>
             </div>
           </section>

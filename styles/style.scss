@@ -6,6 +6,7 @@ $cBlue: #4e70be;
 $cGray: #808080;
 $cLightBlack: #404040;
 $cLightGray: #bfbfbf;
+$cRed: #e16363;
 $contentMaxWidth: 1260px;
 $navHeight: 90px;
 $pdLR: 30px;
@@ -56,12 +57,32 @@ select,
 input[type='text'],
 input[type='email'],
 input[type='date'] {
-  height: 40px;
+  height: 44px;
   padding: 0 5px;
 }
 input[type='radio'] {
   width: 20px;
   height: 40px;
+}
+
+thead {
+  th {
+    background-color: $cLightBlue;
+    color: $cWhite;
+  }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid $cGray;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+td {
+  padding-left: 3px;
 }
 
 /* common  ----------------------------------------- */
@@ -91,9 +112,16 @@ input[type='radio'] {
   height: 20px;
   padding-left: 5px;
   margin-top: 3px;
-  color: red;
+  color: $cRed;
 }
 .btn {
+  background-color: $cBlue;
+  cursor: pointer;
+  padding: 10px 20px;
+  color: $cWhite;
+  font-weight: bold;
+}
+.btn-with-a {
   background-color: $cBlue;
   cursor: pointer;
   a {
@@ -106,6 +134,7 @@ input[type='radio'] {
 
 /* member-mst.html ----------------------------------------- */
 .member-mst {
+  padding-bottom: 100px;
   header {
     background-color: $cLightBlue;
     height: $navHeight;
@@ -116,15 +145,26 @@ input[type='radio'] {
     max-width: $contentMaxWidth;
     margin: 0 auto;
     height: 100%;
-    &__ul {
-      height: 100%;
+    display: flex;
+    justify-content: space-between;
+    &__ul-left,
+    &__ul-right {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
+      align-items: center;
+    }
+    &__ul-left {
+      width: 230px;
+      @media screen and (min-width: 1000px) {
+        width: 460px;
+      }
+      flex-shrink: 0;
+    }
+    &__ul-right {
+      justify-content: flex-end;
     }
     &__item {
-      padding: 0 30px;
+      padding: 0 $pdLR;
       color: $cWhite;
       font-weight: bold;
       line-height: 1;
@@ -135,14 +175,16 @@ input[type='radio'] {
     }
     &__btn {
       button {
-        margin: 0 30px;
+        margin: 0 $pdLR;
       }
     }
   }
   .member-search {
-    margin-bottom: 40px;
+    width: 100%;
+    max-width: $contentMaxWidth;
+    margin: 0 auto 40px;
     &__title {
-      margin-bottom: 15px;
+      margin: 0 0 15px 30px;
     }
     &__form {
       display: flex;
@@ -152,20 +194,15 @@ input[type='radio'] {
     }
     &__form-group {
       display: flex;
-      align-items: center;
-      margin-bottom: 15px;
+      flex-direction: column;
+      flex-direction: column;
+      margin: 0 30px 15px;
       label {
-        display: block;
-        margin: 0 3px 0 10px;
-        line-height: 1.3;
-      }
-      label[for='venue'] {
-        margin-left: 0;
+        margin-bottom: 2px;
       }
     }
     &__form-group-button {
-      margin-left: auto;
-      margin-bottom: 20px;
+      margin: 0 30px 38px;
     }
   }
   .member-list-and-details {
@@ -180,26 +217,9 @@ input[type='radio'] {
     }
     &__table-wrapper {
       overflow-y: scroll;
-      max-height: 100vh;
+      max-height: 85vh;
     }
     &__table {
-      width: 100%;
-      border-collapse: collapse;
-      thead {
-        th {
-          background-color: $cLightBlue;
-          color: $cWhite;
-        }
-      }
-      th,
-      td {
-        border: 1px solid $cGray;
-        padding-top: 7px;
-        padding-bottom: 7px;
-      }
-      td {
-        padding-left: 3px;
-      }
       .td-name {
         a {
           color: $cBlue;
@@ -268,12 +288,10 @@ input[type='radio'] {
       flex-wrap: wrap;
       align-items: center;
       margin-bottom: 30px;
-      label {
+      .title {
         width: 20%;
       }
-      input,
-      select,
-      textarea,
+      .content,
       .err-msg {
         width: 78%;
       }
@@ -282,19 +300,8 @@ input[type='radio'] {
       }
     }
     &__form-group-radio {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      align-items: center;
-      margin-bottom: 20px;
-      .title {
-        width: 20%;
-      }
-      .radio-buttons,
-      .err-msg {
-        width: 78%;
-      }
-      .radio-buttons {
+      @extend .member-info__form-group;
+      .content {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -302,28 +309,10 @@ input[type='radio'] {
           margin: 0 12px 0 3px;
         }
       }
-      .err-msg {
-        margin-left: auto;
-      }
     }
     &__form-group-zip-code {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      align-items: center;
-      margin-bottom: 20px;
-      label {
-        width: 20%;
-      }
-      // input {
-      //   width: 100px;
-      //   margin-right: 10px;
-      // }
-      .zip-code-contents,
-      .err-msg {
-        width: 78%;
-      }
-      .zip-code-contents {
+      @extend .member-info__form-group;
+      .content {
         margin-left: auto;
         display: flex;
         justify-content: space-between;
@@ -335,8 +324,39 @@ input[type='radio'] {
           text-align: center;
         }
       }
-      .err-msg {
-        margin-left: auto;
+    }
+    &__form-group-buttons {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 50px;
+      button {
+        min-width: 22%;
+        color: $cWhite;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+        &.btn-clear {
+          background-color: $cGray;
+          padding: 10px 0;
+        }
+        &.btn-registration {
+          background-color: $cBlue;
+          padding: 10px 0;
+        }
+        &.btn-unsubscribe {
+          background-color: $cBlack;
+          a {
+            display: block;
+            padding: 10px 0;
+            color: $cWhite;
+          }
+        }
+        &.btn-deleated {
+          background-color: $cRed;
+          padding: 10px 0;
+        }
       }
     }
     &__form-required-item {
@@ -346,6 +366,163 @@ input[type='radio'] {
       background-color: $cLightBlue;
       padding: 3px 5px;
       letter-spacing: 2px;
+    }
+  }
+  // modal --------------------------------
+  .unsubscribe-modal {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 60px 10px;
+    text-align: center;
+    &:not(:target) {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    &:target {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.4s, visibility 0.4s;
+    }
+    &::after {
+      display: inline-block;
+      height: 100%;
+      margin-left: -0.05em;
+      vertical-align: middle;
+      content: '';
+    }
+
+    &__window {
+      box-sizing: border-box;
+      display: inline-block;
+      z-index: 20;
+      position: relative;
+      width: 80%;
+      max-width: 700px;
+      padding: 30px;
+      background: $cWhite;
+      vertical-align: middle;
+    }
+
+    &__overlay {
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    &__content {
+      max-height: 80vh;
+      overflow-y: auto;
+      border: 3px solid $cGray;
+    }
+
+    &__close {
+      z-index: 20;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      width: 25px;
+      height: 25px;
+      color: $cLightBlack;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 25px;
+      text-align: center;
+      text-decoration: none;
+      text-indent: 0;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 4px;
+        height: 25px;
+        background: #333;
+      }
+      &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+      &:hover {
+        color: #2b2e38 !important;
+      }
+    }
+
+    &__title {
+      color: $cWhite;
+      background-color: $cLightBlue;
+      height: 70px;
+      line-height: 70px;
+      text-align: left;
+      padding-left: $pdLR;
+    }
+
+    &__content-wrapper {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      label,
+      .content {
+        text-align: left;
+      }
+      .unsubscribe-buttons {
+        justify-content: flex-start;
+        button {
+          min-width: 22%;
+          color: $cWhite;
+          text-align: center;
+          font-weight: bold;
+          padding: 10px 0;
+          cursor: pointer;
+          &.btn-unsubscribe-update {
+            background-color: $cLightGray;
+            margin-right: 30px;
+          }
+          &.btn-cancel {
+            background-color: $cLightBlue;
+          }
+        }
+      }
+    }
+  }
+
+  .my-venue-content {
+    &__title {
+      color: $cBlue;
+      padding-bottom: 20px;
+    }
+    &__name {
+      display: flex;
+      padding-bottom: 20px;
+      .name,
+      .member-type {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  .other-venue-content {
+    &__title {
+      color: $cBlue;
+      padding-bottom: 20px;
+    }
+    &__name {
+      display: flex;
+      padding-bottom: 20px;
+      .name,
+      .member-type {
+        margin-left: 30px;
+      }
     }
   }
 }
