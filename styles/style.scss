@@ -65,16 +65,18 @@ input[type='radio'] {
   height: 40px;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
 thead {
   th {
     background-color: $cLightBlue;
     color: $cWhite;
   }
 }
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
+
 th,
 td {
   border: 1px solid $cGray;
@@ -85,35 +87,42 @@ td {
   padding-left: 3px;
 }
 
-/* common  ----------------------------------------- */
+/* common class ----------------------------------------- */
 .main-title {
   font-size: 28px;
   font-weight: bold;
 }
+
 .sub-title {
   font-size: 20px;
 }
+
 .content-width {
   width: 100%;
   max-width: $contentMaxWidth;
   margin: 0 auto;
   padding: 0 $pdLR;
 }
+
 .select-common {
-  width: 160px;
+  width: 200px;
 }
+
 .input-name {
   width: 200px;
 }
+
 .input-email {
-  width: 240px;
+  width: 250px;
 }
+
 .err-msg {
   height: 20px;
   padding-left: 5px;
   margin-top: 3px;
   color: $cRed;
 }
+
 .btn {
   background-color: $cBlue;
   cursor: pointer;
@@ -121,6 +130,7 @@ td {
   color: $cWhite;
   font-weight: bold;
 }
+
 .btn-with-a {
   background-color: $cBlue;
   cursor: pointer;
@@ -189,13 +199,12 @@ td {
     &__form-group {
       display: flex;
       flex-direction: column;
-      margin-bottom: 15px;
       label {
         margin-bottom: 2px;
       }
     }
     &__form-group-button {
-      margin-bottom: 38px;
+      margin-bottom: 23px;
     }
   }
   .member-list-and-details {
@@ -388,7 +397,6 @@ td {
       vertical-align: middle;
       content: '';
     }
-
     &__window {
       box-sizing: border-box;
       display: inline-block;
@@ -400,7 +408,6 @@ td {
       background: $cWhite;
       vertical-align: middle;
     }
-
     &__overlay {
       z-index: 10;
       position: absolute;
@@ -410,13 +417,11 @@ td {
       left: 0;
       background: rgba(0, 0, 0, 0.8);
     }
-
     &__content {
       max-height: 80vh;
       overflow-y: auto;
       border: 3px solid $cGray;
     }
-
     &__close {
       z-index: 20;
       position: absolute;
@@ -451,7 +456,6 @@ td {
         color: #2b2e38 !important;
       }
     }
-
     &__title {
       color: $cWhite;
       background-color: $cLightBlue;
@@ -460,7 +464,6 @@ td {
       text-align: left;
       padding-left: $pdLR;
     }
-
     &__content-wrapper {
       padding-top: 30px;
       padding-bottom: 30px;
@@ -488,7 +491,6 @@ td {
       }
     }
   }
-
   .my-venue-content {
     &__title {
       color: $cBlue;
@@ -503,7 +505,6 @@ td {
       }
     }
   }
-
   .other-venue-content {
     &__title {
       color: $cBlue;
