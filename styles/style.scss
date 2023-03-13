@@ -124,22 +124,28 @@ td {
 }
 
 .btn {
-  background-color: $cBlue;
   cursor: pointer;
-  padding: 10px 20px;
-  color: $cWhite;
+  padding: 10px 0;
   font-weight: bold;
+  text-align: center;
 }
 
 .btn-with-a {
-  background-color: $cBlue;
-  cursor: pointer;
   a {
     display: block;
-    padding: 10px 20px;
-    color: $cWhite;
+    padding: 10px 0;
     font-weight: bold;
+    text-align: center;
   }
+}
+
+.form-required-item {
+  font-size: 14px;
+  font-weight: bold;
+  color: $cWhite;
+  background-color: $cLightBlue;
+  padding: 3px 5px;
+  letter-spacing: 2px;
 }
 
 /* member-mst.html ----------------------------------------- */
@@ -180,6 +186,14 @@ td {
         color: $cWhite;
         display: block;
       }
+      .btn-with-a {
+        background-color: $cBlue;
+        a {
+          padding-left: 20px;
+          padding-right: 20px;
+          color: $cWhite;
+        }
+      }
     }
   }
   .member-search {
@@ -205,6 +219,10 @@ td {
     }
     &__form-group-button {
       margin-bottom: 23px;
+      background-color: $cBlue;
+      padding-left: 20px;
+      padding-right: 20px;
+      color: $cWhite;
     }
   }
   .member-list-and-details {
@@ -323,7 +341,10 @@ td {
           width: 48%;
         }
         button {
-          text-align: center;
+          background-color: $cBlue;
+          a {
+            color: $cWhite;
+          }
         }
       }
     }
@@ -336,38 +357,24 @@ td {
       button {
         min-width: 22%;
         color: $cWhite;
-        text-align: center;
-        font-weight: bold;
         cursor: pointer;
         &.btn-clear {
           background-color: $cGray;
-          padding: 10px 0;
         }
         &.btn-registration {
           background-color: $cBlue;
-          padding: 10px 0;
         }
         &.btn-unsubscribe {
           background-color: $cBlack;
           a {
             display: block;
-            padding: 10px 0;
             color: $cWhite;
           }
         }
         &.btn-deleated {
           background-color: $cRed;
-          padding: 10px 0;
         }
       }
-    }
-    &__form-required-item {
-      font-size: 14px;
-      font-weight: bold;
-      color: $cWhite;
-      background-color: $cLightBlue;
-      padding: 3px 5px;
-      letter-spacing: 2px;
     }
   }
   // modal --------------------------------
@@ -476,10 +483,6 @@ td {
         button {
           min-width: 22%;
           color: $cWhite;
-          text-align: center;
-          font-weight: bold;
-          padding: 10px 0;
-          cursor: pointer;
           &.btn-unsubscribe-update {
             background-color: $cLightGray;
             margin-right: 30px;
